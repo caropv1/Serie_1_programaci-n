@@ -1,0 +1,41 @@
+/*4- Imprimir en pantalla los 5 primeros elementos de la siguiente serie:
+Z1: ((x+1)/2)
+Z2: ((x+2)/4)
+Z3: ((x+3)/6)
+Donde el valor de “x” lo da el usuario.
+Usar ciclo: while o for.*/
+
+#include <stdio.h>
+
+int main() {
+    float z, x, s; /*declarar variables*/
+    printf("\n Escoja una serie");
+    printf("\n 1- ((x+1)/2)  2- ((x+2)/4)  3-((x+3)/6)");
+    scanf("%f", &z); /*leer la serie escogida*/
+
+    if (z==1 || z==2 || z==3) {
+        printf("\n \n Los primeros 5 elementos  de la serie son: ");
+        if (z==1){
+            for (x=1 ; x<=5 ; x++){
+                s=((x+1)/2);
+                printf("\n %f,", s);
+            }
+        }    
+        else if (z==2){
+            for (x=1 ; x<=5 ; x++){
+                s=((x+2)/4);
+                printf("\n %f,", s);
+            }    
+        }
+        else { //z=3
+            for (x=1 ; x<=5 ; x++){
+                s=((x+3)/6);
+                printf("\n %f,", s);
+            }    
+        }                    
+    }
+    else{
+        printf("\n \n Opcion invalida");
+    }
+return 0;
+}
