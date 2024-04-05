@@ -1,0 +1,22 @@
+/*9- Obtener el número factorial, de x número, que de el usuario. 
+Por ejemplo: si el usuario es da 5, el algoritmos calcula: 54321 120 Usar ciclo: while o for.*/
+#include <stdio.h>
+
+int main() {
+  int n, f, i;
+
+  f = 1;
+  i = 1;
+  
+  printf("Ingrese un numero: ");
+  scanf("%d", &n);
+
+  while (i <= n) { // Calcular el factorial
+    f *= i;
+    i++;
+  }
+
+  printf("El factorial de %d es: %d\n", n, f);
+
+  return 0;
+}
