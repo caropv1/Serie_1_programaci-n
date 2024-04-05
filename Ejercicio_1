@@ -1,0 +1,36 @@
+//ejercicio 1 
+//1- Leer tres números “i, j, k” e imprimir si formarían un tipo de triangulo:
+// escaleno, isósceles o equilátero. Usar elementos de decisión: if, if-else.
+#include <stdio.h>
+
+int main() {
+
+    //declaración de variables
+    float n_1, n_2, n_3;
+
+    //lectura de variables
+    printf ("/n Introduzca un numero");
+        scanf("%f", &n_1);
+    printf("/n Introduzca un numero");
+        scanf("%f", &n_2);
+    printf("/n Introduzca un numero");
+        scanf("%f", &n_3);
+    
+    //saber si forman un triangulo
+    if (n_1 + n_2 > n_3 && n_2 + n_3 > n_1 && n_1 + n_3 > n_2 ) {
+        if (n_1==n_2 && n_2==n_3) { //saber si todos los lados son iguales
+            printf("/n Tienes un triangulo equilatero");
+        }
+        else if (n_1==n_2 || n_1==n_3 || n_2==n_3){ // si solo dos son iguales
+            printf("/n Tienes un triangulo isosceles");
+        }
+        else { //si ninguna se cumple (todos los lados son distintos)
+            printf("/n Tienes un triangulo escaleno");
+        }
+    }
+    else { 
+        printf("/n No se puede formar un triangulo con los valores dados");
+    }
+    
+    return 0;
+}
