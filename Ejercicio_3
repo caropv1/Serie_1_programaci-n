@@ -1,0 +1,54 @@
+/*3- Realizar un algoritmo, que ordene tres números diferentes 
+en forma descendente. Usar elementos de decisión: if, if-else.*/
+
+#include <stdio.h>
+int main() 
+{
+    int n_1, n_2, n_3;
+
+    printf("Ingrese un numero\n");
+    scanf("%i",&n_1);
+    printf("Ingrese un numero\n");
+    scanf("%i",&n_2);
+    printf("Ingrese un numero\n");
+    scanf("%i",&n_3);
+
+    // Ordenar los números en forma descendente
+    if (n_1 > n_2) 
+    {
+        if (n_1 > n_3) 
+        {    // num1 es el más grande
+            if (n_2 > n_3) 
+            {
+                printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_1, n_2, n_3);
+            } 
+            else 
+            {
+                printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_1, n_3, n_2);
+            }
+        } 
+        else 
+        {    // num3 es el más grande
+            printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_3, n_1, n_2);
+        }
+    } 
+    else 
+    {
+        if (n_2 > n_3) 
+        {   // num2 es el más grande
+            if (n_1 > n_3) 
+            {
+                printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_2, n_1, n_3);
+            } 
+            else 
+            {
+                printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_2, n_3, n_1);
+            }
+        } 
+        else 
+        {   // num3 es el más grande
+            printf("Los numeros ordenados en forma descendente son: %d, %d, %d\n", n_3, n_2, n_1);
+        }
+    }
+    return 0;
+}
