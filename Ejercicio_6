@@ -1,0 +1,27 @@
+/*6- Obtener la suma de los primeros 10 elementos de la siguiente serie: 
+Z1: 3/5 Z2: 6/10 Z3: 9/15 Z10: 30/50 Usar ciclo: while o for.
+la formula es Z=(3*i)/(5*i) */
+#include <stdio.h>
+
+int main() {
+    float m, z, i, z_s; //declaramos variables
+
+    printf("Desea obtener la suma de la serie? \n si=1 no=0");
+    scanf("%f", &m);
+    i=1; //iniciar contador
+    z_s=0; 
+    if (m==1){ //comprobación
+        
+        while (i<=10){ //ciclo para obtener la suma
+            z= ((i*3)/(5*i));
+            z_s= z_s+z;
+            i++; //agregar uno al contador
+        }
+        printf("\n La suma de la serie es:%f", z_s);  //imprimir la serie
+    }
+    else{
+        printf("Esta bien, hasta luego"); //en caso de negación despedirse del usuario
+    }
+    
+    return 0;
+}
