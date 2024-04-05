@@ -1,0 +1,26 @@
+/*10- Obtener la serie de Fibonacci, hasta el valor que el usuario decida. Por ejemplo si el usuario da 8, 
+se deben de obtener 6 elementos de la serie: 1, 1, 2, 3, 5, 8, 13, 21 Usar ciclo: while o for.*/
+#include <stdio.h>
+
+int main() {
+    int f_3, f_2, f_1, i, c;
+
+    printf("Ingrese la cantidad de elementos de la serie de Fibonacci que desea obtener: ");
+    scanf("%d", &c);
+
+    f_1 = 0;
+    f_2 = 1;
+    i = 0;
+
+    printf("Los primeros %d elementos de la serie de Fibonacci son:\n", c);
+
+    while (i < c) {
+        printf("%d, ", f_1);
+        f_3 = f_1 + f_2;
+        f_1 = f_2;
+        f_2 = f_3;
+        i++;
+    }
+
+    return 0;
+}
